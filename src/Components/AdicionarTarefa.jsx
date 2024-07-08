@@ -13,16 +13,16 @@ function AdicionarTarefa({ adicionarTarefa }) {
 
   return (
     <div className="flex justify-center">
-      <article>
+      <article className="self-center">
         <input type="text" value={novaTarefa} onChange={(e) => setNovaTarefa(e.target.value)}
-          className="pl-3 pr-3 pt-2 pb-2 border border-gray-300 rounded-l"placeholder="Nova tarefa"/>
+          className="px-3 py-2 border border-gray-300 rounded-l"placeholder="Nova tarefa"/>
         <select name="estado" value={estadoTarefa} onChange={(e) => setEstadoTarefa(e.target.value)}
-          className="pl-3 pr-3 pt-2 border border-gray-300 rounded-r">
+          className="px-3 pt-2 border border-gray-300 rounded-r">
             <option value="Não concluído">Não concluído</option>
             <option value="Concluido">Concluído</option>
         </select>
       </article>
-      <button onClick={handleAdicionarTarefa} className="ml-2 p-2 bg-sky-600 text-white rounded-xl font-semibold hover:bg-sky-700">Adicionar</button>
+      <button onClick={handleAdicionarTarefa} className="ml-2 px-5 py-3 bg-sky-600 text-white rounded-xl font-semibold text-base hover:bg-sky-700">Adicionar</button>
     </div>
   );
 }
