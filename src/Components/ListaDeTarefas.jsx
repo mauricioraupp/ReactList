@@ -1,4 +1,3 @@
-// src/ListaDeTarefas.js
 import React from 'react';
 
 const ListaDeTarefas = ({ tarefas }) => {
