@@ -11,6 +11,12 @@ td, th{
   border-bottom: 1px solid rgb(241 245 249);
   border-right: 1px solid rgb(241 245 249);
 }
+table tr:last-child td{
+  border-bottom: none;
+}
+table tr td:last-child{
+  border-right: none;
+}
 
 table th:first-child{
   border-radius:12px 0 0 0;

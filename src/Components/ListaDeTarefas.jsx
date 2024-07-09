@@ -2,7 +2,7 @@ import React from 'react';
 
 const ListaDeTarefas = ({ tarefas }) => {
   return (
-    <table className="w-3/4 m-auto border-solid border-2 border-slate-100 border-separate border-spacing-0 rounded-2xl">
+    <table className="w-3/4 m-auto border-solid border border-slate-100 border-separate border-spacing-0 rounded-xl">
       <thead>
         <tr>
           <th className="text-left text-slate-100">Ordem</th>
@@ -10,7 +10,7 @@ const ListaDeTarefas = ({ tarefas }) => {
           <th className="text-left text-slate-100">Estado</th>
         </tr>
       </thead>
-      <tbody className="rounded-lg">
+      <tbody>
         {tarefas.map((tarefa) => (
           <tr key={tarefa.id}>
             <td className="text-slate-100">{tarefa.id}</td>
