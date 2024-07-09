@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import ListaDeTarefas from './Components/ListaDeTarefas';
 import AdicionarTarefa from './Components/AdicionarTarefa';
-import useDarkMode from './Hooks/DarkMode';
+import MoonIcon from './Components/MoonIcon';
+
 
 function App() {
-  const [isDarkMode, toggleDarkMode] = useDarkMode();
   const [tarefas, setTarefas] = useState([
     { id: 1, descricao: 'Estudar React', estado: 'Concluído' },
     { id: 2, descricao: 'Fazer compras', estado: 'Não concluído' },
@@ -22,13 +22,10 @@ function App() {
   };
 
   return (
-    <div className="w-full flex justify-center"{...isDarkMode ? 'dark' : ''}>
+    <div className="w-full flex justify-center">
       <header className="w-5/6 flex flex-col gap-10 justify-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-        className='size-10 fixed top-14 right-24 cursor-pointer' onClick={toggleDarkMode}
-        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
-        </svg>
         <h1 className="text-center text-3xl font-semibold pt-10 text-slate-900 dark:text-slate-50">Minha Lista de Tarefas</h1>
+        <MoonIcon/>
         <AdicionarTarefa adicionarTarefa={adicionarTarefa} />
         <ListaDeTarefas tarefas={tarefas} />
       </header>
