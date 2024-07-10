@@ -49,3 +49,7 @@ th, table tr:nth-child(even){
 table tr:nth-child(odd){
 	background-color: rgb(241 245 249);
 }
+
+table tr th:nth-child(3), table tr td:nth-child(3){
+  border-right: none;
+}
