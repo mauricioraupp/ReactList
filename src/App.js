@@ -3,7 +3,6 @@ import ListaDeTarefas from './Components/ListaDeTarefas';
 import AdicionarTarefa from './Components/AdicionarTarefa';
 import MoonIcon from './Components/MoonIcon';
 
-
 function App() {
   const [tarefas, setTarefas] = useState([
     { id: 1, descricao: 'Estudar React', estado: 'Concluído' },
@@ -27,7 +26,7 @@ function App() {
         <h1 className="text-center text-3xl font-semibold pt-10 text-slate-900 dark:text-slate-50">Minha Lista de Tarefas</h1>
         <MoonIcon/>
         <AdicionarTarefa adicionarTarefa={adicionarTarefa} />
-        <ListaDeTarefas tarefas={tarefas} />
+        <ListaDeTarefas tarefas={tarefas} setTarefas={setTarefas}/>
       </header>
     </div>
   );
